@@ -3,12 +3,13 @@ id: #string
 class: #string
 url: "#menu-link"
 title: "Menu Link"
-target: "_self"
+target: "doc-content"
 rel: "next"
 ---
 {{#mixin "agency-pkg-elements/link" this}}
   {{#content "attributes"}}
     data-package="agency-pkg-docs"
     data-partial="elements/link/menu"
+    target="{{{target}}}"
   {{/content}}
 {{/mixin}}

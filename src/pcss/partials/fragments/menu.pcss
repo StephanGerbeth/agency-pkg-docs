@@ -2,6 +2,56 @@
   position: fixed;
   left: 0;
   top: 0;
-  /*width: 16%;*/
+  width: 16%;
   height: 100%;
+  z-index: 10;
+  &:before {
+    content: "";
+    display: block;
+    position: relative;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    z-index: 1;
+  }
+  >div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    color: white;
+    a {
+      color: white;
+    }
+  }
+  h3 {
+    font-size: calc(18 / 16)em;
+    margin: 10px 0;
+    padding: 0 10px;
+  }
+  .toggle {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    padding: 10px;
+    background: rgba(0,0,0,0.55);
+    color: #ffffff;
+    font-size: calc(18 / 16)em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: calc(1 / 16)em;
+    border: solid #666666;
+    border-left-color: rgba(51, 51, 51, .8);
+    border-width: 0 1px 1px 0;
+  }
+
+  transform: translateX(-100%);
+  transition: transform .35s ease;
+  &.show {
+    .toggle {
+    background: rgba(0,0,0,0.75);
+    }
+    transform: translateX(0%);
+  }
 }

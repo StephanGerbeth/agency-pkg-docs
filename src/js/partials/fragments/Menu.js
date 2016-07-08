@@ -12,7 +12,7 @@ module.exports = Controller.extend({
     }),
 
     events: {
-        'click a': onClick
+        'click .js-click-toggle' : onClickToggle
     },
 
     initialize: function() {
@@ -22,8 +22,7 @@ module.exports = Controller.extend({
 
 });
 
-function onClick(e) {
+function onClickToggle(e) {
     e.preventDefault();
-this.targetModel.url = e.target.href;
-
+    this.el.classList.toggle('show');
 }
