@@ -18,7 +18,7 @@ list:
   {{#each list}}
     <li>
       {{#if (isString this)}}
-        {{{mixin "elements/link/menu" url=this title=@key}}}
+        {{{mixin "agency-pkg-docs/elements/link/menu" url=this title=@key}}}
       {{else}}
         <input type="checkbox" id="{{@key}}"/>
         <label for="{{@key}}">
