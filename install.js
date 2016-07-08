@@ -42,13 +42,15 @@ function preparePackage() {
         }
     };
     var src = path.join(process.cwd(), 'src', 'js');
-    fs.readdirSync(process.cwd()).forEach(function(childItemName) {
-        var curPath = path.join(process.cwd(), childItemName);
-        if (excludedFiles.indexOf(path.basename(curPath)) === -1 && fs.statSync(curPath).isFile()) {
-            fs.unlinkSync(curPath);
-        }
-    });
-    copyRecursiveSync(src, process.cwd());
+    if (fs.existsSync(src)) {
+        fs.readdirSync(process.cwd()).forEach(function(childItemName) {
+            var curPath = path.join(process.cwd(), childItemName);
+            if (excludedFiles.indexOf(path.basename(curPath)) === -1 && fs.statSync(curPath).isFile()) {
+                fs.unlinkSync(curPath);
+            }
+        });
+        copyRecursiveSync(src, process.cwd());
+    }
 }
 
 isDependencyPackage(preparePackage);
