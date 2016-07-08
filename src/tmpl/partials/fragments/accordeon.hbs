@@ -1,17 +1,30 @@
 ---
-
+list:
+  'Entry 1': '#entry-1'
+  'Entry 2': '#entry-2'
+  'Entry 3':
+    'Entry 1.1': '#entry-1-1'
+    'Entry 1.2': '#entry-1-2'
+    'Entry 1.3': '#entry-1-3'
+  'Entry 4':
+    'Entry 4.1': '#entry-4-1'
+    'Entry 4.2': '#entry-4-2'
+    'Entry 4.3':
+      'Entry 4.3.1': '#entry-4-3-1'
+      'Entry 4.3.2': '#entry-4-3-2'
+      'Entry 4.3.3': '#entry-4-3-3'
 ---
 <ul class="partial" data-package="agency-pkg-docs" data-partial="fragments/accordeon">
   {{#each list}}
     <li>
       {{#if (isString this)}}
-        {{{mixin "agency-pkg-elements/link" url=this title=@key}}}
+        {{{mixin "agency-pkg-docs/elements/link/menu" url=this title=@key}}}
       {{else}}
         <input type="checkbox" id="{{@key}}"/>
         <label for="{{@key}}">
           {{@key}}
         </label>
-        {{{mixin "fragments/accordeon" list=this}}}
+        {{{mixin "agency-pkg-docs/fragments/accordeon" list=this}}}
       {{/if}}
     </li>
   {{/each}}

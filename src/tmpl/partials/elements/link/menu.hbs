@@ -1,0 +1,14 @@
+---
+id: #string
+class: #string
+url: "#menu-link"
+title: "Menu Link"
+target: "_self"
+rel: "next"
+---
+{{#mixin "agency-pkg-elements/link" this}}
+  {{#content "attributes"}}
+    data-package="agency-pkg-docs"
+    data-partial="elements/link/menu"
+  {{/content}}
+{{/mixin}}
