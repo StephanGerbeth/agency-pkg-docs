@@ -1,7 +1,7 @@
 /**
  * Copy js source files to root from installed package, for use relative path with require.
- * require("agency-pkg-name/relative/path");
- * @version 0.0.1
+ * require("prefix-pkg-name/relative/path");
+ * @version 0.0.2
  */
 
 "use strict";
