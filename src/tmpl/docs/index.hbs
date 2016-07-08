@@ -19,6 +19,6 @@ layout: "agency-pkg-layouts/default"
 {{/globTree}}
 
 <h2>Packages</h2>
-{{#globTree "node_modules/**/src/tmpl/partials/**/*.hbs"}}
+{{#globTree "node_modules/**/src/tmpl/partials/**/*.hbs" "node_modules/agency-boilerplate/src/tmpl/partials/**/*.hbs"}}
     {{{mixin "agency-pkg-docs/fragments/accordeon" list=this}}}
 {{/globTree}}
