@@ -10,7 +10,9 @@
     display: block;
     position: relative;
     height: 100%;
-    background: rgba(0,0,0,0.75);
+    background: rgba(255, 255, 255, 1);
+    border-right: solid #aaaaaa 1px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     z-index: 1;
   }
   >div {
@@ -20,22 +22,18 @@
     width: 100%;
     height: 100%;
     z-index: 2;
-    color: white;
-    a {
-      color: white;
-    }
   }
   h3 {
-    font-size: calc(18 / 16)em;
-    margin: 10px 0;
-    padding: 0 10px;
+    font-size: calc(16 / 16)em;
+    margin: calc(10 / 16)em 0;
+    padding: 0 calc(5 / 16)em;
   }
   .toggle {
     position: absolute;
     top: 0;
     left: 100%;
     padding: 10px;
-    background: rgba(0,0,0,0.55);
+    background: rgba(0, 0, 0, 0.55);
     color: #ffffff;
     font-size: calc(18 / 16)em;
     font-weight: bold;
@@ -45,12 +43,12 @@
     border-left-color: rgba(51, 51, 51, .8);
     border-width: 0 1px 1px 0;
   }
-
+  will-change: transform;
   transform: translateX(-100%);
   transition: transform .35s ease;
-  &.show {
+  .js-show-menu & {
     .toggle {
-    background: rgba(0,0,0,0.75);
+      background: rgba(0, 0, 0, 0.75);
     }
     transform: translateX(0%);
   }

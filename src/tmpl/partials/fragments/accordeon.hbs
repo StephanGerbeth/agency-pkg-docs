@@ -1,4 +1,5 @@
 ---
+parent-id: ''
 list:
   'Entry 1': '#entry-1'
   'Entry 2': '#entry-2'
@@ -20,11 +21,8 @@ list:
       {{#if (isString this)}}
         {{{mixin "agency-pkg-docs/elements/link/menu" url=this title=@key}}}
       {{else}}
-        <input type="checkbox" id="{{@key}}"/>
-        <label for="{{@key}}">
-          {{@key}}
-        </label>
-        {{{mixin "agency-pkg-docs/fragments/accordeon" list=this}}}
+        {{{mixin "elements/accordeon/label" id=@key parent-id=../parent-id}}}
+        {{{mixin "agency-pkg-docs/fragments/accordeon" list=this parent-id=@key}}}
       {{/if}}
     </li>
   {{/each}}

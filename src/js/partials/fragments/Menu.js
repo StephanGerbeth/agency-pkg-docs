@@ -7,22 +7,25 @@ var dataTypeDefinition = require('agency-pkg-base/dataTypeDefinition');
 module.exports = Controller.extend({
 
     modelConstructor: DomModel.extend(dataTypeDefinition, {
-        session: {
-        }
+        session: {}
     }),
 
     events: {
-        'click .js-click-toggle' : onClickToggle
+        'click [href][target]': onClick,
+        'click .js-click-toggle': onClickToggle
     },
 
     initialize: function() {
         Controller.prototype.initialize.apply(this, arguments);
-
     },
 
 });
 
+function onClick() {
+    this.targetModel.showOverlay = true;
+}
+
 function onClickToggle(e) {
     e.preventDefault();
-    this.el.classList.toggle('show');
+    this.targetModel.showMenu = !this.targetModel.showMenu;
 }

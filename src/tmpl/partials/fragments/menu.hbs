@@ -1,4 +1,5 @@
 ---
+show: true
 list-components:
   'Component 1': 'docs/partials/elements/link/menu.html'
   'Component 2':
@@ -15,7 +16,7 @@ list-elements:
 list-packages:
   'Package 1': '#package-1'
 ---
-<div class="partial controller" data-package="agency-pkg-docs" data-partial="fragments/menu" data-controller="agency-pkg-docs/partials/fragments/Menu" data-target="[data-package='agency-pkg-docs'][data-partial='components/overview']">
+<div class="partial controller {{#if show}} show{{/if}}" data-package="agency-pkg-docs" data-partial="fragments/menu" data-controller="agency-pkg-docs/partials/fragments/Menu" data-target="[data-package='agency-pkg-docs'][data-partial='components/overview']">
   <span class="js-click-toggle toggle">Show/Hide</span>
   <div>
     {{#block "content"}}
