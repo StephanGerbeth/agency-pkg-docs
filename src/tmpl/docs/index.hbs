@@ -1,4 +1,40 @@
 ---
 layout: "agency-pkg-layouts/default"
 ---
-{{{mixin "agency-pkg-docs/components/overview"}}}
+{{#mixin "agency-pkg-docs/components/overview"}}
+
+  {{#content "menu"}}
+
+      {{#mixin "agency-pkg-docs/fragments/menu"}}
+
+      {{#content "content"}}
+
+        <h2>Components</h2>
+        {{#globTree "src/tmpl/partials/components/**/*.hbs"}}
+          {{{mixin "agency-pkg-docs/fragments/accordeon" list=this}}}
+        {{/globTree}}
+
+
+        <h2>Fragments</h2>
+        {{#globTree "src/tmpl/partials/fragments/**/*.hbs"}}
+          {{{mixin "agency-pkg-docs/fragments/accordeon" list=this}}}
+        {{/globTree}}
+
+
+        <h2>Elements</h2>
+        {{#globTree "src/tmpl/partials/elements/**/*.hbs"}}
+            {{{mixin "agency-pkg-docs/fragments/accordeon" list=this}}}
+        {{/globTree}}
+
+        <h2>Packages</h2>
+        {{#globTree "node_modules/**/src/tmpl/partials/**/*.hbs" "node_modules/agency-boilerplate/src/tmpl/partials/**/*.hbs"}}
+            {{{mixin "agency-pkg-docs/fragments/accordeon" list=this}}}
+        {{/globTree}}
+
+      {{/content}}
+
+      {{/mixin}}
+
+  {{/content}}
+
+{{/mixin}}
