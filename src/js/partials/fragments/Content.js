@@ -29,8 +29,11 @@ function onUrlChange(model, url) {
 }
 
 function onLoad() {
-    this.targetModel.showOverlay = false;
-    this.targetModel.showMenu = false;
+    this.iframe.style.minHeight = '100%';
+    global.animationFrame.add(function () {
+        this.targetModel.showOverlay = false;
+        this.targetModel.showMenu = false;
+    }.bind(this));
 }
 
 function onClick() {

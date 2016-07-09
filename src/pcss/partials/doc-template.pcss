@@ -1,0 +1,38 @@
+.partial[data-partial="doc-template"] {
+  margin-bottom: calc(72/16)rem;
+  >h2, >section>h3 {
+    color: #666;
+  }
+  >h2 {
+    margin: calc(10/16)rem;
+    font-size: calc(20/16)em;
+  }
+  >section {
+    >h3 {
+      margin: calc(10/16)rem 0;
+      font-size: calc(16/16)em;
+    }
+  }
+}
+.partial[data-partial="doc-template/code"] {
+  margin: calc(10/16)rem;
+
+}
+.partial[data-partial="doc-template/related-partials"] {
+  margin: calc(10/16)rem;
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      margin: calc(10/16)rem 0;
+      a {
+        font-size: calc(16/16)em;
+        text-decoration: none;
+        color: $agency_pkg_docs_color_link_secondary;
+        display: block;
+        border-left: solid #ccc 3px;
+        padding: 0 calc(5/16)rem;
+      }
+    }
+  }
+}
