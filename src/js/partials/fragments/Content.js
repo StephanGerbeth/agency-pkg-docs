@@ -3,6 +3,7 @@
 var Controller = require('agency-pkg-base/Controller');
 var DomModel = require('agency-pkg-base/DomModel');
 var dataTypeDefinition = require('agency-pkg-base/dataTypeDefinition');
+var animationFrame = global.animationFrame;
 
 module.exports = Controller.extend({
     modelConstructor: DomModel.extend(dataTypeDefinition, {
@@ -25,12 +26,15 @@ module.exports = Controller.extend({
 });
 
 function onUrlChange(model, url) {
-    this.iframe.setAttribute('src', url + '?stats=false');
+    animationFrame.add(function() {
+        this.iframe.setAttribute('style', '');
+        this.iframe.setAttribute('src', url + '?stats=false');
+    }.bind(this));
 }
 
 function onLoad() {
-    this.iframe.style.minHeight = '100%';
-    global.animationFrame.add(function () {
+    this.iframe.setAttribute('style', 'height: 100%;');
+    animationFrame.add(function() {
         this.targetModel.showOverlay = false;
         this.targetModel.showMenu = false;
     }.bind(this));
