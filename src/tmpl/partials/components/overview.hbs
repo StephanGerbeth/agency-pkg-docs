@@ -1,7 +1,8 @@
 ---
-
+config:
+  show-menu: true
 ---
-<div class="partial controller" data-package="agency-pkg-docs" data-partial="components/overview" data-controller="agency-pkg-docs/partials/components/Overview">
+<div class="partial controller" data-package="agency-pkg-docs" data-partial="components/overview" data-controller="agency-pkg-docs/partials/components/Overview"{{#each config}} data-{{{@key}}}="{{{this}}}"{{/each}}>
 
   {{#block "menu"}}
       {{{mixin "agency-pkg-docs/fragments/menu"}}}

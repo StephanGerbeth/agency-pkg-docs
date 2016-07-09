@@ -24,4 +24,5 @@ function onUrlChange(model, url) {
 
 function onLoad() {
     this.targetModel.showOverlay = false;
+    this.targetModel.showMenu = false;
 }
