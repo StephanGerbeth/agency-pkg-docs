@@ -11,6 +11,7 @@ module.exports = Controller.extend({
 
     events: {
         'click [data-partial="elements/link/menu"]': onClick,
+            'click [data-partial="elements/link/external"]': onClickExternal,
         'click .js-click-toggle': onClickToggle
     },
 
@@ -29,8 +30,14 @@ module.exports = Controller.extend({
 
 function onClick(e) {
     e.preventDefault();
-    this.targetModel.showOverlay = true;
-    this.targetModel.url = e.target.href;
+    if (this.targetModel.url !== e.target.href) {
+        this.targetModel.showOverlay = true;
+        this.targetModel.url = e.target.href;
+    }
+}
+
+function onClickExternal(e) {
+    
 }
 
 function onClickToggle(e) {

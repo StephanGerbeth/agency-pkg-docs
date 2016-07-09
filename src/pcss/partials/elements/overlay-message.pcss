@@ -18,19 +18,41 @@
     font-weight: bold;
     text-align: center;
     color: rgba(0, 0, 0, 0.2);
+    line-height: 2.5;
     .highlight {
       padding: calc(4/16)em;
       display: inline-block;
       border: solid #CCCCCC 4px;
       border-radius: calc(4/16)em;
+      line-height: 1;
     }
   }
   opacity: 0;
   visibility: hidden;
-    transition: opacity .35s 0s ease, visibility 0s .35s ease;
+  transition: opacity .35s 0s ease, visibility 0s .35s ease;
   .js-show-overlay & {
-transition: opacity 0s 0s ease, visibility 0s 0s ease;
+    transition: opacity 0s 0s ease, visibility 0s 0s ease;
     opacity: 1;
     visibility: visible;
+  }
+  .icon-small-burger {
+    vertical-align: middle;
+    &:before, &:after {
+      content: "";
+      display: block;
+      border: solid 4px;
+      border-color: rgba(0, 0, 0, 0.2);
+      border-radius: calc(1 / 16)em;
+      width: calc(14 / 16)em;
+      height: 0;
+      transition: transform .35s ease;
+      transform-origin: left center;
+    }
+    &:before {
+      margin-bottom: calc(4 / 16)em;
+    }
+    &:after {
+      margin-top: calc(4 / 16)em;
+    }
   }
 }

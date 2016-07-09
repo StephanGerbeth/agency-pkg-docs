@@ -8,12 +8,18 @@ module.exports = Controller.extend({
     modelConstructor: DomModel.extend(dataTypeDefinition, {
 
     }),
+    events: {
+        'click .placeholder': onClick
+    },
     initialize: function() {
         Controller.prototype.initialize.apply(this, arguments);
         this.iframe = this.el.querySelector('iframe');
         this.iframe.addEventListener('load', onLoad.bind(this));
         if (this.targetModel) {
             this.targetModel.on('change:url', onUrlChange.bind(this));
+            if (this.targetModel.url) {
+                onUrlChange.bind(this)(this.targetModel, this.targetModel.url);
+            }
         }
     }
 });
@@ -24,5 +30,9 @@ function onUrlChange(model, url) {
 
 function onLoad() {
     this.targetModel.showOverlay = false;
+    this.targetModel.showMenu = false;
+}
+
+function onClick() {
     this.targetModel.showMenu = false;
 }
