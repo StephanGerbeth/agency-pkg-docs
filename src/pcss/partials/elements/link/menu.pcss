@@ -2,5 +2,16 @@
   color: #333333;
   text-decoration: none;
   font-size: calc(14 / 16)em;
-  padding: calc(4 / 16)em calc(5 / 16)em;
+  padding: calc(10 / 16)em calc(5 / 16)em;
+  border: solid rgba(0, 0, 0, 0.2);
+  border-width: 0 0 1px 0;
+  transition: background-color .35s ease;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  position: relative;
+  display: block;
+  &.selected {
+    font-weight: bold;
+  }
 }

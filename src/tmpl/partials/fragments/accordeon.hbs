@@ -20,6 +20,7 @@ list:
     <li>
       {{#if (isString this)}}
         {{{mixin "agency-pkg-docs/elements/link/menu" url=this title=@key}}}
+        {{{mixin "agency-pkg-docs/elements/link/external" url=this}}}          
       {{else}}
         {{{mixin "agency-pkg-docs/elements/accordeon/label" id=@key parent-id=../parent-id}}}
         {{{mixin "agency-pkg-docs/fragments/accordeon" list=this parent-id=@key}}}

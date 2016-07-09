@@ -23,28 +23,10 @@
     height: 100%;
     z-index: 2;
   }
-  .toggle {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.55);
-    color: #ffffff;
-    font-size: calc(18 / 16)em;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: calc(1 / 16)em;
-    border: solid #666666;
-    border-left-color: rgba(51, 51, 51, .8);
-    border-width: 0 1px 1px 0;
-  }
   will-change: transform;
   transform: translateX(-100%);
   transition: transform .35s ease;
   .js-show-menu & {
-    .toggle {
-      background: rgba(0, 0, 0, 0.75);
-    }
     transform: translateX(0%);
   }
 }

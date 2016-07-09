@@ -28,7 +28,8 @@ packages:
     'Package 1': '#package-1'
 ---
 <div class="partial controller" data-package="agency-pkg-docs" data-partial="fragments/menu" data-controller="agency-pkg-docs/partials/fragments/Menu" data-target="[data-package='agency-pkg-docs'][data-partial='components/overview']">
-  <span class="js-click-toggle toggle">Show/Hide</span>
+  {{!-- <span class="js-click-toggle toggle">Show/Hide</span> --}}
+  {{{mixin "agency-pkg-docs/elements/menu/toggle" class="js-click-toggle"}}}
   <div>
     {{#block "content"}}
       {{{mixin "agency-pkg-docs/elements/menu/headline" components.headline}}}

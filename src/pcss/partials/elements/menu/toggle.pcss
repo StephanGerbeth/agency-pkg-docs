@@ -1,0 +1,44 @@
+.partial[data-package="agency-pkg-docs"][data-partial="elements/menu/toggle"] {
+  position: absolute;
+  bottom: 0%;
+  left: 100%;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #ffffff;
+  /*font-size: calc(18 / 16)em;*/
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: calc(1 / 16)em;
+  border: solid #666666;
+  border-left-color: rgba(51, 51, 51, .8);
+  border-width: 0 1px 1px 0;
+  cursor: pointer;
+  &:before, &:after {
+    content: "";
+    display: block;
+    background: white;
+    width: calc(32 / 16)em;
+    height: calc(4 / 16)em;
+    transition: transform .35s ease;
+    transform-origin: left center;
+  }
+  &:before {
+    margin-bottom: calc(8 / 16)em;
+  }
+  &:after {
+    margin-top: calc(8 / 16)em;
+  }
+  .js-show-menu & {
+    background: rgba(0, 0, 0, 0.75);
+
+    &:before {
+    transform: rotateZ(22.5deg);
+    }
+    &:after {
+
+      transform-origin: left center;
+      transform: rotateZ(-22.5deg);
+    }
+
+  }
+}

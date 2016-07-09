@@ -1,0 +1,13 @@
+---
+id: #string
+class: #string
+title: ext.
+---
+{{#mixin "agency-pkg-elements/link" this}}
+  {{#content "attributes"}}
+    data-package="agency-pkg-docs"
+    data-partial="elements/link/external"
+    target="_blank"
+  {{/content}}
+  {{#content "title"}}{{{title}}}{{/content}}
+{{/mixin}}
