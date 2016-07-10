@@ -33,18 +33,22 @@ packages:
   {{!-- <span class="js-click-toggle toggle">Show/Hide</span> --}}
   {{{mixin "agency-pkg-docs/elements/menu/toggle" class="js-click-toggle"}}}
   <div>
-    {{#block "content"}}
-      {{{mixin "agency-pkg-docs/elements/menu/headline" components.headline}}}
-      {{{mixin "agency-pkg-docs/fragments/accordeon" list=components.list}}}
+    <div class="scroll-wrapper">
+      <div class="scroll-container">
+          {{#block "content"}}
+            {{{mixin "agency-pkg-docs/elements/menu/headline" components.headline}}}
+            {{{mixin "agency-pkg-docs/fragments/accordeon" list=components.list}}}
 
-      {{{mixin "agency-pkg-docs/elements/menu/headline" fragments.headline}}}
-      {{{mixin "agency-pkg-docs/fragments/accordeon" list=fragments.list}}}
+            {{{mixin "agency-pkg-docs/elements/menu/headline" fragments.headline}}}
+            {{{mixin "agency-pkg-docs/fragments/accordeon" list=fragments.list}}}
 
-      {{{mixin "agency-pkg-docs/elements/menu/headline" elements.headline}}}
-      {{{mixin "agency-pkg-docs/fragments/accordeon" list=elements.list}}}
+            {{{mixin "agency-pkg-docs/elements/menu/headline" elements.headline}}}
+            {{{mixin "agency-pkg-docs/fragments/accordeon" list=elements.list}}}
 
-      {{{mixin "agency-pkg-docs/elements/menu/headline" packages.headline}}}
-      {{{mixin "agency-pkg-docs/fragments/accordeon" list=packages.list}}}
-    {{/block}}
+            {{{mixin "agency-pkg-docs/elements/menu/headline" packages.headline}}}
+            {{{mixin "agency-pkg-docs/fragments/accordeon" list=packages.list}}}
+          {{/block}}
+      </div>
+    </div>
   </div>
 </div>

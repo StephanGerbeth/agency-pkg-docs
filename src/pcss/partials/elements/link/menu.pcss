@@ -3,9 +3,12 @@
   text-decoration: none;
   font-size: calc(14 / 16)em;
   padding: calc(10 / 16)em calc(5 / 16)em;
+  transition-property: background, color;
+  transition-duration: .35s, .35s;
+  transition-timing-function: ease, ease;
+
   border: solid rgba(0, 0, 0, 0.2);
   border-width: 0 0 1px 0;
-  transition: background-color .35s ease;
   position: relative;
   display: block;
   &.selected {

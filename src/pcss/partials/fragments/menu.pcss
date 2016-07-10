@@ -1,8 +1,11 @@
+
 .partial[data-package="agency-pkg-docs"][data-partial="fragments/menu"] {
   position: fixed;
   left: 0;
   top: 0;
-  width: 16%;
+  width: calc($agency_pkg_docs_menu_width)%;
+  max-width: calc($agency_pkg_docs_menu_width * 10)px;
+  min-width: calc(($agency_pkg_docs_menu_width_min) * 10)px;
   height: 100%;
   z-index: 10;
   &:before {
@@ -10,7 +13,7 @@
     display: block;
     position: relative;
     height: 100%;
-    background: rgba(255,255,255,0.6);
+    background: rgba(255, 255, 255, 0.6);
     border-right: solid #aaaaaa 1px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     z-index: 1;
@@ -19,11 +22,26 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100%;
-    z-index: 2;
-    overflow-x: hidden;
-    overflow-y: auto;
+      width: calc($agency_pkg_docs_menu_width)vw;
+      max-width: calc(($agency_pkg_docs_menu_width_max) * 10)px;
+      min-width: calc(($agency_pkg_docs_menu_width_min) * 10)px;
+      z-index: 2;
+      overflow-x: hidden;
+    >.scroll-wrapper {
+      max-width: calc(($agency_pkg_docs_menu_width_max+ 4) * 10)px;
+      min-width: calc((($agency_pkg_docs_menu_width_min)+ 4) * 10)px;
+      width: calc($agency_pkg_docs_menu_width+ 4)vw;
+      height: 100%;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      >.scroll-container {
+        width: calc($agency_pkg_docs_menu_width)vw;
+        max-width: calc(($agency_pkg_docs_menu_width_max) * 10)px;
+        min-width: calc(($agency_pkg_docs_menu_width_min) * 10)px;
+        height: 100%;
+      }
+    }
   }
   will-change: transform;
   transform: translateX(-100%);
