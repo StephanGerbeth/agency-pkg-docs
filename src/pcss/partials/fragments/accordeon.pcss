@@ -5,7 +5,14 @@
   input:checked+ .partial[data-package="agency-pkg-docs"][data-partial="elements/accordeon/label"] {
     @extend .partial[data-package="agency-pkg-docs"][data-partial="elements/accordeon/label"].selected;
     &:after {
-      @extend .partial[data-package="agency-pkg-docs"][data-partial="elements/accordeon/label"].selected:after;
+      @extend .partial[data-package="agency-pkg-docs"][data-partial="elements/accordeon/label"].selected: after;
+    }
+  }
+  border: solid rgba(0, 0, 0, 0.2);
+  border-width: 0 0 1px 0;
+  &:last-child {
+    [data-partial="fragments/accordeon"] {
+      border-width: 0;
     }
   }
   ul {
@@ -18,7 +25,6 @@
     }
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.05);
-    border-bottom: none;
   }
   li {
     position: relative;
