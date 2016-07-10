@@ -27,17 +27,23 @@ module.exports = Controller.extend({
 
 function onUrlChange(model, url) {
     animationFrame.add(function() {
-        this.iframe.setAttribute('style', '');
-        this.iframe.setAttribute('src', url + '?stats=false');
+        if (url !== this.iframe.contentWindow.location.href) {
+            this.iframe.setAttribute('style', '');
+            this.iframe.setAttribute('src', url);
+        }
     }.bind(this));
 }
 
 function onLoad() {
-    this.iframe.setAttribute('style', 'height: 100%;');
-    animationFrame.add(function() {
-        this.targetModel.showOverlay = false;
-        this.targetModel.showMenu = false;
-    }.bind(this));
+    if (this.targetModel.url !== this.iframe.contentWindow.location.href) {
+        this.targetModel.url = this.iframe.contentWindow.location.href;
+    } else {
+        this.iframe.setAttribute('style', 'height: 100%;');
+        animationFrame.add(function() {
+            this.targetModel.showOverlay = false;
+            this.targetModel.showMenu = false;
+        }.bind(this));
+    }
 }
 
 function onClick() {
