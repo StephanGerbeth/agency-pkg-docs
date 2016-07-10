@@ -32,6 +32,12 @@
       >.scroll-container {
         width: 100vw;
         height: 100%;
+        >div {
+          transition: background-color .35s ease;
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+          }
+        }
       }
     }
   }

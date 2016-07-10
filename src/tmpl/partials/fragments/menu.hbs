@@ -36,17 +36,27 @@ packages:
     <div class="scroll-wrapper">
       <div class="scroll-container">
           {{#block "content"}}
-            {{{mixin "agency-pkg-docs/elements/menu/headline" components.headline}}}
-            {{{mixin "agency-pkg-docs/fragments/accordeon" list=components.list}}}
 
-            {{{mixin "agency-pkg-docs/elements/menu/headline" fragments.headline}}}
-            {{{mixin "agency-pkg-docs/fragments/accordeon" list=fragments.list}}}
+            <div class="components">
+              {{{mixin "agency-pkg-docs/elements/menu/headline" components.headline}}}
+              {{{mixin "agency-pkg-docs/fragments/accordeon" list=components.list}}}
+            </div>
 
-            {{{mixin "agency-pkg-docs/elements/menu/headline" elements.headline}}}
-            {{{mixin "agency-pkg-docs/fragments/accordeon" list=elements.list}}}
+            <div class="fragments">
+              {{{mixin "agency-pkg-docs/elements/menu/headline" fragments.headline}}}
+              {{{mixin "agency-pkg-docs/fragments/accordeon" list=fragments.list}}}
+            </div>
 
-            {{{mixin "agency-pkg-docs/elements/menu/headline" packages.headline}}}
-            {{{mixin "agency-pkg-docs/fragments/accordeon" list=packages.list}}}
+            <div class="elements">
+              {{{mixin "agency-pkg-docs/elements/menu/headline" elements.headline}}}
+              {{{mixin "agency-pkg-docs/fragments/accordeon" list=elements.list}}}
+            </div>
+
+            <div class="packages">
+              {{{mixin "agency-pkg-docs/elements/menu/headline" packages.headline}}}
+              {{{mixin "agency-pkg-docs/fragments/accordeon" list=packages.list}}}
+            </div>
+            
           {{/block}}
       </div>
     </div>

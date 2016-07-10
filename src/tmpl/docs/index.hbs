@@ -21,25 +21,33 @@ packages:
 
         {{#content "content"}}
 
-          {{{mixin "agency-pkg-docs/elements/menu/headline" components.headline}}}
-          {{#globTree "src/tmpl/partials/components/**/*.hbs"}}
-            {{{mixin "agency-pkg-docs/fragments/accordeon" list=this}}}
-          {{/globTree}}
-
-          {{{mixin "agency-pkg-docs/elements/menu/headline" fragments.headline}}}
-          {{#globTree "src/tmpl/partials/fragments/**/*.hbs"}}
-            {{{mixin "agency-pkg-docs/fragments/accordeon" list=this}}}
-          {{/globTree}}
-
-          {{{mixin "agency-pkg-docs/elements/menu/headline" elements.headline}}}
-          {{#globTree "src/tmpl/partials/elements/**/*.hbs"}}
+          <div class="components">
+            {{{mixin "agency-pkg-docs/elements/menu/headline" components.headline}}}
+            {{#globTree "src/tmpl/partials/components/**/*.hbs"}}
               {{{mixin "agency-pkg-docs/fragments/accordeon" list=this}}}
-          {{/globTree}}
+            {{/globTree}}
+          </div>
 
-          {{{mixin "agency-pkg-docs/elements/menu/headline" packages.headline}}}
-          {{#globTree "node_modules/**/src/tmpl/partials/**/*.hbs" "node_modules/agency-boilerplate/src/tmpl/partials/**/*.hbs"}}
+          <div class="fragments">
+            {{{mixin "agency-pkg-docs/elements/menu/headline" fragments.headline}}}
+            {{#globTree "src/tmpl/partials/fragments/**/*.hbs"}}
               {{{mixin "agency-pkg-docs/fragments/accordeon" list=this}}}
-          {{/globTree}}
+            {{/globTree}}
+          </div>
+
+          <div class="elements">
+            {{{mixin "agency-pkg-docs/elements/menu/headline" elements.headline}}}
+            {{#globTree "src/tmpl/partials/elements/**/*.hbs"}}
+                {{{mixin "agency-pkg-docs/fragments/accordeon" list=this}}}
+            {{/globTree}}
+          </div>
+
+          <div class="packages">
+            {{{mixin "agency-pkg-docs/elements/menu/headline" packages.headline}}}
+            {{#globTree "node_modules/**/src/tmpl/partials/**/*.hbs" "node_modules/agency-boilerplate/src/tmpl/partials/**/*.hbs"}}
+                {{{mixin "agency-pkg-docs/fragments/accordeon" list=this}}}
+            {{/globTree}}
+          </div>
 
         {{/content}}
 
