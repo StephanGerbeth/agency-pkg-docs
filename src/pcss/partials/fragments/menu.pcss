@@ -1,5 +1,5 @@
 .partial[data-package="agency-pkg-docs"][data-partial="fragments/menu"] {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   width: 100%;
@@ -36,8 +36,7 @@
     }
   }
   @media (min-width: 768px) {
-    &:before {
-    }
+    &:before {}
     width: calc($agency_pkg_docs_menu_width)%;
     max-width: calc($agency_pkg_docs_menu_width * 10)px;
     min-width: calc(($agency_pkg_docs_menu_width_min) * 10)px;

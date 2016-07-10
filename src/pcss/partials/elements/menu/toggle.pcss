@@ -1,7 +1,17 @@
 .partial[data-package="agency-pkg-docs"][data-partial="elements/menu/toggle"] {
-  position: fixed;
+  position: absolute;
   z-index: 11;
-  bottom: 0%;
+  top: 0;
+  .partial[data-partial="components/overview"] & {
+    top: auto;
+    bottom: 0%;
+  }
+  .preview> & {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }
   left: 100%;
   color: white;
   will-change: background-color, color;
@@ -27,7 +37,7 @@
   &:before {
     margin-bottom: calc(6 / 16)em;
   }
-  .js-show-menu & {
+  .js-show-menu &, &:hover {
     color: rgba(0, 0, 0, 0.55);
     background-color: transparent;
     border-color: currentColor;
