@@ -1,5 +1,11 @@
-@import "./src/pcss/common/variables.pcss";
-@import "./src/pcss/partials.pcss";
+/**
+ * Use relative root Path for imports.
+ * @import "./partials/module/index.pcss"; -> false
+ * @import "./module/index.pcss"; -> true
+ */
+
+@import "./common/variables.pcss";
+@import "./overview/index.pcss";
 
 html, body {
   height: 100%;
