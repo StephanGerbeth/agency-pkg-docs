@@ -1,0 +1,64 @@
+---
+components:
+  headline:
+    text: 'Components'
+  list:
+    'Component 1': 'docs/partials/elements/link/menu.html'
+    'Component 2':
+      'Component 2.1': 'docs/partials/elements/link/menu.html'
+      'Component 2.2': '#component-2-2'
+      'Component 2.3':
+        'Component 2.3.1': '#component-1-3-1'
+        'Component 2.3.2': '#component-1-3-2'
+        'Component 2.3.3': '#component-1-3-3'
+fragments:
+  headline:
+    text: 'Fragments'
+  list:
+    'accordeon': 'docs/partials/fragments/accordeon.html'
+    'content': 'docs/partials/fragments/content.html'
+    'menu': 'docs/partials/fragments/menu.html'
+elements:
+  headline:
+    text: 'Elements'
+  list:
+    'Element 1': '#element-1'
+packages:
+  headline:
+    text: 'Packages'
+  list:
+    'Package 1': '#package-1'
+---
+<div class="pkg controller" data-pkg="agency-pkg-docs/overview/menu" data-controller="agency-pkg-docs/overview/menu" data-target="[data-pkg='agency-pkg-docs/overview']">
+  {{!-- <span class="js-click-toggle toggle">Show/Hide</span> --}}
+  {{{mixin "agency-pkg-docs/elements/menu/toggle" class="js-click-toggle"}}}
+  <div>
+    <div class="scroll-wrapper">
+      <div class="scroll-container">
+          {{#block "content"}}
+
+            <div class="components">
+              {{{mixin "agency-pkg-docs/menu/headline" components.headline}}}
+              {{{mixin "agency-pkg-docs/accordeon" list=components.list}}}
+            </div>
+
+            <div class="fragments">
+              {{{mixin "agency-pkg-docs/menu/headline" fragments.headline}}}
+              {{{mixin "agency-pkg-docs/accordeon" list=fragments.list}}}
+            </div>
+
+            <div class="elements">
+              {{{mixin "agency-pkg-docs/menu/headline" elements.headline}}}
+              {{{mixin "agency-pkg-docs/accordeon" list=elements.list}}}
+            </div>
+
+            <div class="packages">
+              {{{mixin "agency-pkg-docs/menu/headline" packages.headline}}}
+              {{{mixin "agency-pkg-docs/accordeon" list=packages.list}}}
+            </div>
+
+          {{/block}}
+      </div>
+    </div>
+  </div>
+</div>

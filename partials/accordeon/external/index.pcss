@@ -1,0 +1,27 @@
+.pkg[data-pkg="agency-pkg-docs/accordeon/external"] {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  height: 100%;
+  text-align: center;
+  transform: translateY(-50%);
+  display: block;
+  transition-property: color;
+  transition-duration: .35s;
+  transition-timing-function: ease;
+  color: #5588ff;
+  &:hover {
+    color: #ff3344;
+  }
+  &:before {
+    display: inline-block;
+    height: 100%;
+    width: 0px;
+    vertical-align: middle;
+    content: "";
+  }
+  font-size: calc(11 / 16)em;
+  line-height: 1;
+  text-decoration: none;
+  padding: 0 calc(8 / 16)em;
+}

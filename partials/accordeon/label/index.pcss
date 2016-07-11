@@ -1,0 +1,43 @@
+.pkg[data-pkg="agency-pkg-docs/accordeon/label"] {
+  /*border-left: solid #666666 4px;*/
+  color: #333333;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  display: block;
+  padding: calc(4 / 16)em calc(8 / 16)em;
+  font-size: calc(12 / 16)em;
+  font-weight: bold;
+  color: #555;
+  background: rgba(85, 136, 255, 0.1);
+  transition-property: background-color, color;
+  transition-duration: 0.35s, 0.35s;
+  transition-timing-function: ease, ease;
+  &:hover {
+    color: #000000;
+  }
+  border: solid rgba(0, 0, 0, 0.2);
+  border-width: 1px 0 0px 1px;
+  text-shadow: 0 0 1px white;
+  overflow: hidden;
+  white-space: nowrap;
+  &:after {
+    will-change: transform;
+    transition: transform .35s ease;
+    transform: rotateZ(0deg);
+    transform-origin: center;
+    content: "+";
+    float: right;
+    width: calc(18 / 16)rem;
+    height: calc(14 / 16)rem;
+    text-align: center;
+    font-size: 1rem;
+    line-height: calc(14 / 16)rem;
+  }
+  &.selected {
+    background: rgba(255, 51, 68, 0.1);
+    &:after {
+      transform: rotateZ(405deg);
+    }
+  }
+}

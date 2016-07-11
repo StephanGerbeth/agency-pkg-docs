@@ -1,0 +1,45 @@
+.pkg[data-pkg="agency-pkg-docs/accordeon"] {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  input:checked+ .pkg[data-pkg="agency-pkg-docs/accordeon/label"] {
+    @extend .pkg[data-pkg="agency-pkg-docs/accordeon/label"].selected;
+    &:after {
+      @extend .pkg[data-pkg="agency-pkg-docs/accordeon/label"].selected:after;
+    }
+  }
+  border: solid rgba(0, 0, 0, 0.2);
+  border-width: 0 0 1px 0;
+  &:last-child {
+    .pkg[data-pkg="agency-pkg-docs/accordeon"] {
+      border-width: 0;
+    }
+  }
+  ul {
+    height: 0;
+    >* {
+      transition-property: opacity;
+      transition-duration: 0.35s;
+      transition-delay: 0s;
+      opacity: 0;
+    }
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  li {
+    position: relative;
+    input {
+      display: none;
+      &:checked+ label {
+        &+ ul {
+          height: auto;
+          >* {
+            opacity: 1;
+            transition-duration: 0.35s;
+            transition-delay: 0.2s;
+          }
+        }
+      }
+    }
+  }
+}

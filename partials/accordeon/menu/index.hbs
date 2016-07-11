@@ -1,0 +1,15 @@
+---
+id: #string
+class: #string
+url: "#menu-link"
+title: "Menu Link"
+target: "doc-content"
+rel: "next"
+---
+{{#mixin "agency-pkg-elements/link" this}}
+  {{#content "attributes"}}
+    data-pkg="agency-pkg-docs/accordeon/menu"
+    target="{{{target}}}"
+  {{/content}}
+  {{#content "title"}}<span>{{{title}}}</span>{{/content}}
+{{/mixin}}
