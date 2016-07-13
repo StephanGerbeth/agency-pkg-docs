@@ -42,9 +42,12 @@ module.exports = Controller.extend({
         onChangeShowOverlay.bind(this)(this.model, this.model.showOverlay);
         onChangeShowMenu.bind(this)(this.model, this.model.showMenu);
 
+
         if (history.registry.get('url')) {
             this.model.url = history.registry.get('url').value;
         }
+
+        document.querySelector('html').classList.add('agency-pkg-docs-overview');
 
     }
 

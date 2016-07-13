@@ -18,7 +18,7 @@ function isDependencyPackage(cb) {
 }
 
 /**
- * Clean package root and exclude src/js
+ * Clean package root and exclude src
  */
 function preparePackage() {
     var ignoreFiles = ['package.json', 'README.md', 'LICENSE.md', '.gitignore', '.npmignore', 'index.js', 'index.pcss'];
@@ -41,18 +41,18 @@ function preparePackage() {
             }
         }
     };
-    var src = path.join(process.cwd(), 'src-pkg');
-    if (fs.existsSync(src)) {
+    var srcPkg = path.join(process.cwd(), 'src');
+    if (fs.existsSync(srcPkg)) {
         fs.readdirSync(process.cwd()).forEach(function(filename) {
             var curPath = path.join(process.cwd(), filename);
             if (ignoreFiles.indexOf(path.basename(curPath)) === -1 && fs.statSync(curPath).isFile()) {
                 fs.unlinkSync(curPath);
-            } else if (ignoreFiles.indexOf(path.basename(curPath)) === -1 && fs.statSync(curPath).isDirectory()) {
-                deleteFolderRecursive(curPath);
             }
         });
-        copyRecursiveSync(src, process.cwd());
+        copyRecursiveSync(srcPkg, process.cwd());
     }
+    deleteFolderRecursive(srcPkg);
+    deleteFolderRecursive(path.join(process.cwd(), 'test'));
 }
 
 /**

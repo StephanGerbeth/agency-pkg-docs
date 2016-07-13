@@ -10,15 +10,14 @@ module.exports = Controller.extend({
     }),
 
     events: {
-        'click [data-pkg="accordeon/menu"]': onClick,
-            'click [data-pkg="accordeon/external"]': onClickExternal,
+        'click [data-pkg="agency-pkg-docs/accordeon/menu"]': onClick,
         'click .js-click-toggle': onClickToggle
     },
 
     initialize: function() {
         Controller.prototype.initialize.apply(this, arguments);
 
-        this.links = this.el.querySelectorAll('[data-pkg="accordeon/menu"]');
+        this.links = this.el.querySelectorAll('[data-pkg="agency-pkg-docs/accordeon/menu"]');
 
         this.targetModel.on('change:url', onUrlChange.bind(this));
         if (this.targetModel.url) {
@@ -34,10 +33,6 @@ function onClick(e) {
         this.targetModel.showOverlay = true;
         this.targetModel.url = e.target.href;
     }
-}
-
-function onClickExternal(e) {
-
 }
 
 function onClickToggle(e) {

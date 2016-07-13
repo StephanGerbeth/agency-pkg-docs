@@ -44,8 +44,8 @@ packages:
 
           <div class="packages">
             {{{mixin "agency-pkg-docs/overview/menu/headline" packages.headline}}}
-            {{#globTree "node_modules/**/src/tmpl/partials/**/*.hbs" "node_modules/agency-boilerplate/**/*.hbs"}}
-                {{{mixin "agency-pkg-docs/fragments/accordeon" list=this}}}
+            {{#globTree "node_modules/*-pkg-*/**/*.hbs"}}
+                {{{mixin "agency-pkg-docs/accordeon" list=this}}}
             {{/globTree}}
           </div>
 
