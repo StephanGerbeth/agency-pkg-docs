@@ -24,28 +24,28 @@ packages:
           <div class="components">
             {{{mixin "agency-pkg-docs/overview/menu/headline" components.headline}}}
             {{#globTree "src/tmpl/partials/components/**/*.hbs"}}
-              {{{mixin "agency-pkg-docs/accordeon" list=this}}}
+              {{{mixin "agency-pkg-docs/accordeon" parent-id="components" list=this}}}
             {{/globTree}}
           </div>
 
           <div class="fragments">
             {{{mixin "agency-pkg-docs/overview/menu/headline" fragments.headline}}}
             {{#globTree "src/tmpl/partials/fragments/**/*.hbs"}}
-              {{{mixin "agency-pkg-docs/accordeon" list=this}}}
+              {{{mixin "agency-pkg-docs/accordeon" parent-id="fragments" list=this}}}
             {{/globTree}}
           </div>
 
           <div class="elements">
             {{{mixin "agency-pkg-docs/overview/menu/headline" elements.headline}}}
             {{#globTree "src/tmpl/partials/elements/**/*.hbs"}}
-                {{{mixin "agency-pkg-docs/accordeon" list=this}}}
+                {{{mixin "agency-pkg-docs/accordeon" parent-id="elements" list=this}}}
             {{/globTree}}
           </div>
 
           <div class="packages">
             {{{mixin "agency-pkg-docs/overview/menu/headline" packages.headline}}}
             {{#globTree "node_modules/*-pkg-*/**/*.hbs"}}
-                {{{mixin "agency-pkg-docs/accordeon" list=this}}}
+                {{{mixin "agency-pkg-docs/accordeon" parent-id="packages" list=this}}}
             {{/globTree}}
           </div>
 
