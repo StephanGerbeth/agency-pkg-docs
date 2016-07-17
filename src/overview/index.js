@@ -10,21 +10,21 @@ module.exports = Controller.extend({
     modelConstructor: DomModel.extend(dataTypeDefinition, {
         session: {
             url: {
-                type: 'String',
+                type: 'string',
                 required: true,
                 default: function() {
                     return null;
                 }
             },
             showOverlay: {
-                type: 'Boolean',
+                type: 'boolean',
                 required: true,
                 default: function() {
                     return true;
                 }
             },
             showMenu: {
-                type: 'Boolean',
+                type: 'boolean',
                 required: true,
                 default: function() {
                     return false;
