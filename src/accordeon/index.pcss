@@ -3,9 +3,9 @@
   margin: 0;
   padding: 0;
   input:checked+ .pkg[data-pkg="agency-pkg-docs/accordeon/label"] {
-    @extend .pkg[data-pkg="agency-pkg-docs/accordeon/label"].selected;
+    background: rgba(255, 51, 68, 0.1);
     &:after {
-      @extend .pkg[data-pkg="agency-pkg-docs/accordeon/label"].selected:after;
+      transform: rotateZ(405deg);
     }
   }
   border: solid rgba(0, 0, 0, 0.2);

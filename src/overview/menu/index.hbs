@@ -30,30 +30,30 @@ packages:
     'Package 1': '#package-1'
 ---
 <div class="pkg controller" data-pkg="agency-pkg-docs/overview/menu" data-controller="agency-pkg-docs/overview/menu" data-target="[data-pkg='agency-pkg-docs/overview']">
-  {{{mixin "agency-pkg-docs/overview/menu/toggle" class="js-click-toggle"}}}
+  {{{mixin "agency-pkg-docs/overview/toggle" class="js-click-toggle"}}}
   <div>
     <div class="scroll-wrapper">
       <div class="scroll-container">
           {{#block "content"}}
 
             <div class="components">
-              {{{mixin "agency-pkg-docs/overview/menu/headline" components.headline}}}
-              {{{mixin "agency-pkg-docs/accordeon" list=components.list}}}
+              {{{mixin "agency-pkg-docs/overview/headline" components.headline}}}
+              {{{mixin "agency-pkg-docs/accordeon" parent-id="components" list=components.list}}}
             </div>
 
             <div class="fragments">
-              {{{mixin "agency-pkg-docs/overview/menu/headline" fragments.headline}}}
-              {{{mixin "agency-pkg-docs/accordeon" list=fragments.list}}}
+              {{{mixin "agency-pkg-docs/overview/headline" fragments.headline}}}
+              {{{mixin "agency-pkg-docs/accordeon" parent-id="fragments" list=fragments.list}}}
             </div>
 
             <div class="elements">
-              {{{mixin "agency-pkg-docs/overview/menu/headline" elements.headline}}}
-              {{{mixin "agency-pkg-docs/accordeon" list=elements.list}}}
+              {{{mixin "agency-pkg-docs/overview/headline" elements.headline}}}
+              {{{mixin "agency-pkg-docs/accordeon" parent-id="elements" list=elements.list}}}
             </div>
 
             <div class="packages">
-              {{{mixin "agency-pkg-docs/overview/menu/headline" packages.headline}}}
-              {{{mixin "agency-pkg-docs/accordeon" list=packages.list}}}
+              {{{mixin "agency-pkg-docs/overview/headline" packages.headline}}}
+              {{{mixin "agency-pkg-docs/accordeon" parent-id="packages" list=packages.list}}}
             </div>
 
           {{/block}}

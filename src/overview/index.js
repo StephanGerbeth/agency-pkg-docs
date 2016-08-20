@@ -1,9 +1,9 @@
 "use strict";
 
-var history = require('agency-pkg-services/history');
 var Controller = require('agency-pkg-base/Controller');
 var DomModel = require('agency-pkg-base/DomModel');
 var dataTypeDefinition = require('agency-pkg-base/dataTypeDefinition');
+var history = require('agency-pkg-services/history');
 
 module.exports = Controller.extend({
 
