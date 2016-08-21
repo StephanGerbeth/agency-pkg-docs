@@ -22,28 +22,28 @@ packages:
         {{#content "content"}}
 
           <div class="components">
-            {{{mixin "agency-pkg-docs/overview/headline" components.headline}}}
+            {{{mixin "agency-pkg-docs/overview/headline" ../../components.headline}}}
             {{#globTree "src/tmpl/partials/components/**/*.hbs"}}
               {{{mixin "agency-pkg-docs/accordeon" parent-id="components" list=this}}}
             {{/globTree}}
           </div>
 
           <div class="fragments">
-            {{{mixin "agency-pkg-docs/overview/headline" fragments.headline}}}
+            {{{mixin "agency-pkg-docs/overview/headline" ../../fragments.headline}}}
             {{#globTree "src/tmpl/partials/fragments/**/*.hbs"}}
               {{{mixin "agency-pkg-docs/accordeon" parent-id="fragments" list=this}}}
             {{/globTree}}
           </div>
 
           <div class="elements">
-            {{{mixin "agency-pkg-docs/overview/headline" elements.headline}}}
+            {{{mixin "agency-pkg-docs/overview/headline" ../../elements.headline}}}
             {{#globTree "src/tmpl/partials/elements/**/*.hbs"}}
                 {{{mixin "agency-pkg-docs/accordeon" parent-id="elements" list=this}}}
             {{/globTree}}
           </div>
 
           <div class="packages">
-            {{{mixin "agency-pkg-docs/overview/headline" packages.headline}}}
+            {{{mixin "agency-pkg-docs/overview/headline" ../../packages.headline}}}
             {{#globTree "node_modules/*-pkg-*/**/*.hbs"}}
                 {{{mixin "agency-pkg-docs/accordeon" parent-id="packages" list=this}}}
             {{/globTree}}

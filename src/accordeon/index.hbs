@@ -16,15 +16,15 @@ list:
       'Entry 4.3.3': '#entry-4-3-3'
 ---
 <ul class="pkg" data-pkg="agency-pkg-docs/accordeon">
-  {{#each list}}
+  {{#each this.list}}
     <li>
-      {{#if (isString this)}}
-        {{{mixin "agency-pkg-docs/accordeon/menu" url=this title=@key}}}
-        {{{mixin "agency-pkg-docs/accordeon/external" url=this}}}
+      {{#if this.list.length}}
+        <input type="checkbox" id="{{{../parent-id}}} - {{this.path}}"/>
+        {{{mixin "agency-pkg-docs/accordeon/label" id=path title=name parent-id=../parent-id}}}
+        {{{mixin "agency-pkg-docs/accordeon" this parent-id=path}}}
       {{else}}
-        <input type="checkbox" id="{{{../parent-id}}} - {{{@key}}}"/>
-        {{{mixin "agency-pkg-docs/accordeon/label" id=@key parent-id=../parent-id}}}
-        {{{mixin "agency-pkg-docs/accordeon" list=this parent-id=@key}}}
+      {{{mixin "agency-pkg-docs/accordeon/menu" url=url title=name}}}
+      {{{mixin "agency-pkg-docs/accordeon/external" url=url}}}
       {{/if}}
     </li>
   {{/each}}

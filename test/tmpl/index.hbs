@@ -2,5 +2,8 @@
 layout: "agency-pkg-layouts/default"
 ---
 
+{{#with body.overview}}
 
-{{{mixin "agency-pkg-docs/overview"}}}
+  {{{mixin "agency-pkg-docs/overview" this}}}
+
+{{/with}}

@@ -2,19 +2,13 @@
 layout: "agency-pkg-layouts/default"
 src:
   headline:
-    text: 'Src'
-components:
+    text: 'src'
+partials:
   headline:
-    text: 'Components'
-fragments:
-  headline:
-    text: 'Fragments'
-elements:
-  headline:
-    text: 'Elements'
+    text: 'partials'
 packages:
   headline:
-    text: 'Packages'
+    text: 'packages'
 ---
 {{#mixin "agency-pkg-docs/overview"}}
 
@@ -25,35 +19,21 @@ packages:
         {{#content "content"}}
 
           <div class="src">
-            {{{mixin "agency-pkg-docs/overview/headline" src.headline}}}
+            {{{mixin "agency-pkg-docs/overview/headline" ../../src.headline}}}
             {{#globTree "src/**/*.hbs"}}
               {{{mixin "agency-pkg-docs/accordeon" parent-id="src" list=this}}}
             {{/globTree}}
           </div>
 
-          <div class="components">
-            {{{mixin "agency-pkg-docs/overview/headline" components.headline}}}
-            {{#globTree "*/tmpl/partials/components/**/*.hbs"}}
-              {{{mixin "agency-pkg-docs/accordeon" parent-id="components" list=this}}}
-            {{/globTree}}
-          </div>
-
-          <div class="fragments">
-            {{{mixin "agency-pkg-docs/overview/headline" fragments.headline}}}
-            {{#globTree "*/tmpl/partials/fragments/**/*.hbs"}}
-              {{{mixin "agency-pkg-docs/accordeon" parent-id="fragments" list=this}}}
-            {{/globTree}}
-          </div>
-
-          <div class="elements">
-            {{{mixin "agency-pkg-docs/overview/headline" elements.headline}}}
-            {{#globTree "*/tmpl/partials/elements/**/*.hbs"}}
-                {{{mixin "agency-pkg-docs/accordeon" parent-id="elements" list=this}}}
+          <div class="partials">
+            {{{mixin "agency-pkg-docs/overview/headline" ../../partials.headline}}}
+            {{#globTree "test/tmpl/partials/**/*.hbs"}}
+              {{{mixin "agency-pkg-docs/accordeon" parent-id="partials" list=this}}}
             {{/globTree}}
           </div>
 
           <div class="packages">
-            {{{mixin "agency-pkg-docs/overview/headline" packages.headline}}}
+            {{{mixin "agency-pkg-docs/overview/headline" ../../packages.headline}}}
             {{#globTree "node_modules/*-pkg-*/**/*.hbs"}}
                 {{{mixin "agency-pkg-docs/accordeon" parent-id="packages" list=this}}}
             {{/globTree}}
