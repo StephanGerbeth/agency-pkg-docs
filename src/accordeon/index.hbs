@@ -15,12 +15,11 @@ list:
       'Entry 4.3.2': '#entry-4-3-2'
       'Entry 4.3.3': '#entry-4-3-3'
 ---
-<ul class="pkg" data-pkg="agency-pkg-docs/accordeon">
+{{!-- <ul class="pkg controller" data-pkg="agency-pkg-docs/accordeon" data-controller="agency-pkg-docs/accordeon">
   {{#each this.list}}
     <li>
       {{#if this.list.length}}
         <input type="checkbox" id="{{{../parent-id}}} - {{this.path}}"/>
-        {{{mixin "agency-pkg-docs/accordeon/label" id=path title=name parent-id=../parent-id}}}
         {{{mixin "agency-pkg-docs/accordeon" this parent-id=path}}}
       {{else}}
       {{{mixin "agency-pkg-docs/accordeon/menu" url=url title=name}}}
@@ -28,4 +27,34 @@ list:
       {{/if}}
     </li>
   {{/each}}
-</ul>
+</ul> --}}
+
+
+<div class="pkg controller" data-pkg="agency-pkg-docs/accordeon" data-controller="agency-pkg-docs/accordeon">
+
+  <div>
+  {{#if list.length}}
+    <div class="label">
+      {{#if url}}
+        <a href="{{{url}}}" title="{{{name}}}">{{{name}}}</a>
+      {{else}}
+        <span>{{{name}}}</span>
+      {{/if}}
+      <span class="toggle js-click-accordeon-toggle"></span>
+    </div>
+  {{else}}
+    <a class="internal" href="{{{url}}}" title="{{{name}}}">{{{name}}}</a>
+    <a class="external" href="{{{url}}}" target="_blank">ext.</a>
+  {{/if}}
+
+  </div>
+
+  {{#if list.length}}
+    <div class="content">
+    {{#each list}}
+      {{{mixin "agency-pkg-docs/accordeon" this parent-id=path}}}
+    {{/each}}
+    </div>
+  {{/if}}
+
+</div>

@@ -25,7 +25,7 @@ agency-pkg:
         'Component 2.3.3': '#component-1-3-3'
 ---
 <div class="pkg controller" data-pkg="agency-pkg-docs/overview/menu" data-controller="agency-pkg-docs/overview/menu" data-target="[data-pkg='agency-pkg-docs/overview']">
-  {{{mixin "agency-pkg-docs/overview/toggle" class="js-click-toggle"}}}
+  {{{mixin "agency-pkg-docs/overview/toggle" class="js-click-overview-menu-toggle"}}}
   <div>
     <div class="scroll-wrapper">
       <div class="scroll-container">
@@ -33,12 +33,16 @@ agency-pkg:
 
             <div class="src">
               {{{mixin "agency-pkg-docs/overview/headline" src.headline}}}
-              {{{mixin "agency-pkg-docs/accordeon" parent-id="src" list=src.list}}}
+              {{#each src.list}}
+                {{{mixin "agency-pkg-docs/accordeon" this parent-id="agency-src"}}}
+              {{/each}}
             </div>
 
             <div class="agency-pkg">
               {{{mixin "agency-pkg-docs/overview/headline" agency-pkg.headline}}}
-              {{{mixin "agency-pkg-docs/accordeon" parent-id="agency-pkg" list=agency-pkg.list}}}
+              {{#each agency-pkg.list}}
+                {{{mixin "agency-pkg-docs/accordeon" this parent-id="agency-pkg"}}}
+              {{/each}}
             </div>
 
           {{/block}}

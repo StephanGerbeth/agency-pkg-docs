@@ -21,21 +21,27 @@ packages:
           <div class="src">
             {{{mixin "agency-pkg-docs/overview/headline" ../../src.headline}}}
             {{#globTree "src/**/*.hbs"}}
-              {{{mixin "agency-pkg-docs/accordeon" parent-id="src" list=this}}}
+              {{#each this}}
+                {{{mixin "agency-pkg-docs/accordeon" this}}}
+            {{/each}}
             {{/globTree}}
           </div>
 
           <div class="partials">
             {{{mixin "agency-pkg-docs/overview/headline" ../../partials.headline}}}
             {{#globTree "test/tmpl/partials/**/*.hbs"}}
-              {{{mixin "agency-pkg-docs/accordeon" parent-id="partials" list=this}}}
+              {{#each this}}
+                {{{mixin "agency-pkg-docs/accordeon" this}}}
+              {{/each}}
             {{/globTree}}
           </div>
 
           <div class="packages">
             {{{mixin "agency-pkg-docs/overview/headline" ../../packages.headline}}}
             {{#globTree "node_modules/*-pkg-*/**/*.hbs"}}
-                {{{mixin "agency-pkg-docs/accordeon" parent-id="packages" list=this}}}
+              {{#each this}}
+                {{{mixin "agency-pkg-docs/accordeon" this}}}
+              {{/each}}
             {{/globTree}}
           </div>
 

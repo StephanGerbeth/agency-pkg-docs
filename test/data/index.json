@@ -16,7 +16,7 @@
             "base": ".",
             "list": [{
               "name": "index",
-              "url": "accordeon/index.hbs",
+              "url": "accordeon/index.html",
               "path": "accordeon/index",
               "base": "accordeon",
               "list": []
@@ -27,7 +27,7 @@
               "base": "accordeon",
               "list": [{
                 "name": "index",
-                "url": "accordeon/external/index.hbs",
+                "url": "accordeon/external/index.html",
                 "path": "accordeon/external/index",
                 "base": "accordeon/external",
                 "list": []
@@ -39,7 +39,7 @@
               "base": "accordeon",
               "list": [{
                 "name": "index",
-                "url": "accordeon/label/index.hbs",
+                "url": "accordeon/label/index.html",
                 "path": "accordeon/label/index",
                 "base": "accordeon/label",
                 "list": []
@@ -51,7 +51,7 @@
               "base": "accordeon",
               "list": [{
                 "name": "index",
-                "url": "accordeon/menu/index.hbs",
+                "url": "accordeon/menu/index.html",
                 "path": "accordeon/menu/index",
                 "base": "accordeon/menu",
                 "list": []
@@ -64,7 +64,7 @@
             "base": ".",
             "list": [{
               "name": "index",
-              "url": "docs-pkg/index.hbs",
+              "url": "docs-pkg/index.html",
               "path": "docs-pkg/index",
               "base": "docs-pkg",
               "list": []
@@ -76,7 +76,7 @@
             "base": ".",
             "list": [{
               "name": "index",
-              "url": "docs/index.hbs",
+              "url": "docs/index.html",
               "path": "docs/index",
               "base": "docs",
               "list": []
@@ -88,7 +88,7 @@
             "base": ".",
             "list": [{
               "name": "index",
-              "url": "overlay-message/index.hbs",
+              "url": "overlay-message/index.html",
               "path": "overlay-message/index",
               "base": "overlay-message",
               "list": []
@@ -100,7 +100,7 @@
             "base": ".",
             "list": [{
               "name": "index",
-              "url": "overview/index.hbs",
+              "url": "overview/index.html",
               "path": "overview/index",
               "base": "overview",
               "list": []
@@ -111,7 +111,7 @@
               "base": "overview",
               "list": [{
                 "name": "index",
-                "url": "overview/content/index.hbs",
+                "url": "overview/content/index.html",
                 "path": "overview/content/index",
                 "base": "overview/content",
                 "list": []
@@ -123,7 +123,7 @@
               "base": "overview",
               "list": [{
                 "name": "index",
-                "url": "overview/headline/index.hbs",
+                "url": "overview/headline/index.html",
                 "path": "overview/headline/index",
                 "base": "overview/headline",
                 "list": []
@@ -135,7 +135,7 @@
               "base": "overview",
               "list": [{
                 "name": "index",
-                "url": "overview/menu/index.hbs",
+                "url": "overview/menu/index.html",
                 "path": "overview/menu/index",
                 "base": "overview/menu",
                 "list": []
@@ -147,7 +147,7 @@
               "base": "overview",
               "list": [{
                 "name": "index",
-                "url": "overview/toggle/index.hbs",
+                "url": "overview/toggle/index.html",
                 "path": "overview/toggle/index",
                 "base": "overview/toggle",
                 "list": []
@@ -166,31 +166,31 @@
             "base": ".",
             "list": [{
               "name": "adblocker",
-              "url": "packages/agency-pkg-common/adblocker/index.hbs",
+              "url": "packages/agency-pkg-common/adblocker/index.html",
               "path": "agency-pkg-common/adblocker",
               "base": "agency-pkg-common",
               "list": []
             }, {
               "name": "breakpoint",
-              "url": "packages/agency-pkg-common/breakpoint/index.hbs",
+              "url": "packages/agency-pkg-common/breakpoint/index.html",
               "path": "agency-pkg-common/breakpoint",
               "base": "agency-pkg-common",
               "list": []
             }, {
               "name": "noscript",
-              "url": "packages/agency-pkg-common/noscript/index.hbs",
+              "url": "packages/agency-pkg-common/noscript/index.html",
               "path": "agency-pkg-common/noscript",
               "base": "agency-pkg-common",
               "list": []
             }, {
               "name": "outdatedbrowser",
-              "url": "packages/agency-pkg-common/outdatedbrowser/index.hbs",
+              "url": "packages/agency-pkg-common/outdatedbrowser/index.html",
               "path": "agency-pkg-common/outdatedbrowser",
               "base": "agency-pkg-common",
               "list": []
             }, {
               "name": "touch-accessibility",
-              "url": "packages/agency-pkg-common/touch-accessibility/index.hbs",
+              "url": "packages/agency-pkg-common/touch-accessibility/index.html",
               "path": "agency-pkg-common/touch-accessibility",
               "base": "agency-pkg-common",
               "list": []
@@ -202,72 +202,72 @@
             "base": ".",
             "list": [{
               "name": "accordeon",
-              "url": "packages/agency-pkg-docs/accordeon/index.hbs",
+              "url": "packages/agency-pkg-docs/accordeon/index.html",
               "path": "agency-pkg-docs/accordeon",
               "base": "agency-pkg-docs",
               "list": [{
                 "name": "external",
-                "url": "packages/agency-pkg-docs/accordeon/external/index.hbs",
+                "url": "packages/agency-pkg-docs/accordeon/external/index.html",
                 "path": "agency-pkg-docs/accordeon/external",
                 "base": "agency-pkg-docs/accordeon",
                 "list": []
               }, {
                 "name": "label",
-                "url": "packages/agency-pkg-docs/accordeon/label/index.hbs",
+                "url": "packages/agency-pkg-docs/accordeon/label/index.html",
                 "path": "agency-pkg-docs/accordeon/label",
                 "base": "agency-pkg-docs/accordeon",
                 "list": []
               }, {
                 "name": "menu",
-                "url": "packages/agency-pkg-docs/accordeon/menu/index.hbs",
+                "url": "packages/agency-pkg-docs/accordeon/menu/index.html",
                 "path": "agency-pkg-docs/accordeon/menu",
                 "base": "agency-pkg-docs/accordeon",
                 "list": []
               }]
             }, {
               "name": "docs-pkg",
-              "url": "packages/agency-pkg-docs/docs-pkg/index.hbs",
+              "url": "packages/agency-pkg-docs/docs-pkg/index.html",
               "path": "agency-pkg-docs/docs-pkg",
               "base": "agency-pkg-docs",
               "list": []
             }, {
               "name": "docs",
-              "url": "packages/agency-pkg-docs/docs/index.hbs",
+              "url": "packages/agency-pkg-docs/docs/index.html",
               "path": "agency-pkg-docs/docs",
               "base": "agency-pkg-docs",
               "list": []
             }, {
               "name": "overlay-message",
-              "url": "packages/agency-pkg-docs/overlay-message/index.hbs",
+              "url": "packages/agency-pkg-docs/overlay-message/index.html",
               "path": "agency-pkg-docs/overlay-message",
               "base": "agency-pkg-docs",
               "list": []
             }, {
               "name": "overview",
-              "url": "packages/agency-pkg-docs/overview/index.hbs",
+              "url": "packages/agency-pkg-docs/overview/index.html",
               "path": "agency-pkg-docs/overview",
               "base": "agency-pkg-docs",
               "list": [{
                 "name": "content",
-                "url": "packages/agency-pkg-docs/overview/content/index.hbs",
+                "url": "packages/agency-pkg-docs/overview/content/index.html",
                 "path": "agency-pkg-docs/overview/content",
                 "base": "agency-pkg-docs/overview",
                 "list": []
               }, {
                 "name": "headline",
-                "url": "packages/agency-pkg-docs/overview/headline/index.hbs",
+                "url": "packages/agency-pkg-docs/overview/headline/index.html",
                 "path": "agency-pkg-docs/overview/headline",
                 "base": "agency-pkg-docs/overview",
                 "list": []
               }, {
                 "name": "menu",
-                "url": "packages/agency-pkg-docs/overview/menu/index.hbs",
+                "url": "packages/agency-pkg-docs/overview/menu/index.html",
                 "path": "agency-pkg-docs/overview/menu",
                 "base": "agency-pkg-docs/overview",
                 "list": []
               }, {
                 "name": "toggle",
-                "url": "packages/agency-pkg-docs/overview/toggle/index.hbs",
+                "url": "packages/agency-pkg-docs/overview/toggle/index.html",
                 "path": "agency-pkg-docs/overview/toggle",
                 "base": "agency-pkg-docs/overview",
                 "list": []
@@ -280,37 +280,37 @@
             "base": ".",
             "list": [{
               "name": "figcaption",
-              "url": "packages/agency-pkg-elements/figcaption/index.hbs",
+              "url": "packages/agency-pkg-elements/figcaption/index.html",
               "path": "agency-pkg-elements/figcaption",
               "base": "agency-pkg-elements",
               "list": []
             }, {
               "name": "link",
-              "url": "packages/agency-pkg-elements/link/index.hbs",
+              "url": "packages/agency-pkg-elements/link/index.html",
               "path": "agency-pkg-elements/link",
               "base": "agency-pkg-elements",
               "list": [{
                 "name": "deep",
-                "url": "packages/agency-pkg-elements/link/deep/index.hbs",
+                "url": "packages/agency-pkg-elements/link/deep/index.html",
                 "path": "agency-pkg-elements/link/deep",
                 "base": "agency-pkg-elements/link",
                 "list": []
               }, {
                 "name": "image",
-                "url": "packages/agency-pkg-elements/link/image/index.hbs",
+                "url": "packages/agency-pkg-elements/link/image/index.html",
                 "path": "agency-pkg-elements/link/image",
                 "base": "agency-pkg-elements/link",
                 "list": []
               }]
             }, {
               "name": "picture",
-              "url": "packages/agency-pkg-elements/picture/index.hbs",
+              "url": "packages/agency-pkg-elements/picture/index.html",
               "path": "agency-pkg-elements/picture",
               "base": "agency-pkg-elements",
               "list": []
             }, {
               "name": "text",
-              "url": "packages/agency-pkg-elements/text/index.hbs",
+              "url": "packages/agency-pkg-elements/text/index.html",
               "path": "agency-pkg-elements/text",
               "base": "agency-pkg-elements",
               "list": []
@@ -321,31 +321,31 @@
               "base": "agency-pkg-elements",
               "list": [{
                 "name": "h1",
-                "url": "packages/agency-pkg-elements/headline/h1/index.hbs",
+                "url": "packages/agency-pkg-elements/headline/h1/index.html",
                 "path": "agency-pkg-elements/headline/h1",
                 "base": "agency-pkg-elements/headline",
                 "list": []
               }, {
                 "name": "h2",
-                "url": "packages/agency-pkg-elements/headline/h2/index.hbs",
+                "url": "packages/agency-pkg-elements/headline/h2/index.html",
                 "path": "agency-pkg-elements/headline/h2",
                 "base": "agency-pkg-elements/headline",
                 "list": []
               }, {
                 "name": "h3",
-                "url": "packages/agency-pkg-elements/headline/h3/index.hbs",
+                "url": "packages/agency-pkg-elements/headline/h3/index.html",
                 "path": "agency-pkg-elements/headline/h3",
                 "base": "agency-pkg-elements/headline",
                 "list": []
               }, {
                 "name": "h4",
-                "url": "packages/agency-pkg-elements/headline/h4/index.hbs",
+                "url": "packages/agency-pkg-elements/headline/h4/index.html",
                 "path": "agency-pkg-elements/headline/h4",
                 "base": "agency-pkg-elements/headline",
                 "list": []
               }, {
                 "name": "h5",
-                "url": "packages/agency-pkg-elements/headline/h5/index.hbs",
+                "url": "packages/agency-pkg-elements/headline/h5/index.html",
                 "path": "agency-pkg-elements/headline/h5",
                 "base": "agency-pkg-elements/headline",
                 "list": []
@@ -358,25 +358,25 @@
             "base": ".",
             "list": [{
               "name": "default",
-              "url": "packages/agency-pkg-layouts/default/index.hbs",
+              "url": "packages/agency-pkg-layouts/default/index.html",
               "path": "agency-pkg-layouts/default",
               "base": "agency-pkg-layouts",
               "list": []
             }, {
               "name": "documentation",
-              "url": "packages/agency-pkg-layouts/documentation/index.hbs",
+              "url": "packages/agency-pkg-layouts/documentation/index.html",
               "path": "agency-pkg-layouts/documentation",
               "base": "agency-pkg-layouts",
               "list": []
             }, {
               "name": "modal",
-              "url": "packages/agency-pkg-layouts/modal/index.hbs",
+              "url": "packages/agency-pkg-layouts/modal/index.html",
               "path": "agency-pkg-layouts/modal",
               "base": "agency-pkg-layouts",
               "list": []
             }, {
               "name": "package",
-              "url": "packages/agency-pkg-layouts/package/index.hbs",
+              "url": "packages/agency-pkg-layouts/package/index.html",
               "path": "agency-pkg-layouts/package",
               "base": "agency-pkg-layouts",
               "list": []

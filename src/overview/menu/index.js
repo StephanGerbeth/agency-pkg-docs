@@ -11,7 +11,7 @@ module.exports = Controller.extend({
 
     events: {
         'click [data-pkg="agency-pkg-docs/accordeon/menu"]': onClick,
-        'click .js-click-toggle': onClickToggle
+        'click .js-click-overview-menu-toggle': onClickToggle
     },
 
     initialize: function() {
