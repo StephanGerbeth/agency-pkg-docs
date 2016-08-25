@@ -10,14 +10,14 @@ module.exports = Controller.extend({
     }),
 
     events: {
-        'click [data-pkg="agency-pkg-docs/accordeon/menu"]': onClick,
+        'click .internal': onClick,
         'click .js-click-overview-menu-toggle': onClickToggle
     },
 
     initialize: function() {
         Controller.prototype.initialize.apply(this, arguments);
 
-        this.links = this.el.querySelectorAll('[data-pkg="agency-pkg-docs/accordeon/menu"]');
+        this.links = this.el.querySelectorAll('.internal');
 
         this.targetModel.on('change:url', onUrlChange.bind(this));
         if (this.targetModel.url) {

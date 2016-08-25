@@ -11,7 +11,7 @@ module.exports = Controller.extend({
                 type: 'string',
                 required: true,
                 default: function() {
-                    return '> div > div > .js-click-accordeon-toggle';
+                    return '> div > .js-click-accordeon-toggle';
                 }
             },
             opened: {

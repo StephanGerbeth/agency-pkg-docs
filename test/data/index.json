@@ -11,150 +11,62 @@
           },
           "list": [{
             "name": "accordeon",
-            "url": null,
+            "url": "src/accordeon/index.html",
             "path": "accordeon",
             "base": ".",
-            "list": [{
-              "name": "index",
-              "url": "accordeon/index.html",
-              "path": "accordeon/index",
-              "base": "accordeon",
-              "list": []
-            }, {
-              "name": "external",
-              "url": null,
-              "path": "accordeon/external",
-              "base": "accordeon",
-              "list": [{
-                "name": "index",
-                "url": "accordeon/external/index.html",
-                "path": "accordeon/external/index",
-                "base": "accordeon/external",
-                "list": []
-              }]
-            }, {
-              "name": "label",
-              "url": null,
-              "path": "accordeon/label",
-              "base": "accordeon",
-              "list": [{
-                "name": "index",
-                "url": "accordeon/label/index.html",
-                "path": "accordeon/label/index",
-                "base": "accordeon/label",
-                "list": []
-              }]
-            }, {
-              "name": "menu",
-              "url": null,
-              "path": "accordeon/menu",
-              "base": "accordeon",
-              "list": [{
-                "name": "index",
-                "url": "accordeon/menu/index.html",
-                "path": "accordeon/menu/index",
-                "base": "accordeon/menu",
-                "list": []
-              }]
-            }]
+            "list": []
           }, {
             "name": "docs-pkg",
-            "url": null,
+            "url": "src/docs-pkg/index.html",
             "path": "docs-pkg",
             "base": ".",
-            "list": [{
-              "name": "index",
-              "url": "docs-pkg/index.html",
-              "path": "docs-pkg/index",
-              "base": "docs-pkg",
-              "list": []
-            }]
+            "list": []
           }, {
             "name": "docs",
-            "url": null,
+            "url": "src/docs/index.html",
             "path": "docs",
             "base": ".",
-            "list": [{
-              "name": "index",
-              "url": "docs/index.html",
-              "path": "docs/index",
-              "base": "docs",
-              "list": []
-            }]
+            "list": []
           }, {
             "name": "overlay-message",
-            "url": null,
+            "url": "src/overlay-message/index.html",
             "path": "overlay-message",
             "base": ".",
-            "list": [{
-              "name": "index",
-              "url": "overlay-message/index.html",
-              "path": "overlay-message/index",
-              "base": "overlay-message",
-              "list": []
-            }]
+            "list": []
           }, {
             "name": "overview",
-            "url": null,
+            "url": "src/overview/index.html",
             "path": "overview",
             "base": ".",
             "list": [{
-              "name": "index",
-              "url": "overview/index.html",
-              "path": "overview/index",
+              "name": "content",
+              "url": "src/overview/content/index.html",
+              "path": "overview/content",
               "base": "overview",
               "list": []
             }, {
-              "name": "content",
-              "url": null,
-              "path": "overview/content",
-              "base": "overview",
-              "list": [{
-                "name": "index",
-                "url": "overview/content/index.html",
-                "path": "overview/content/index",
-                "base": "overview/content",
-                "list": []
-              }]
-            }, {
               "name": "headline",
-              "url": null,
+              "url": "src/overview/headline/index.html",
               "path": "overview/headline",
               "base": "overview",
-              "list": [{
-                "name": "index",
-                "url": "overview/headline/index.html",
-                "path": "overview/headline/index",
-                "base": "overview/headline",
-                "list": []
-              }]
+              "list": []
             }, {
               "name": "menu",
-              "url": null,
+              "url": "src/overview/menu/index.html",
               "path": "overview/menu",
               "base": "overview",
-              "list": [{
-                "name": "index",
-                "url": "overview/menu/index.html",
-                "path": "overview/menu/index",
-                "base": "overview/menu",
-                "list": []
-              }]
+              "list": []
             }, {
               "name": "toggle",
-              "url": null,
+              "url": "src/overview/toggle/index.html",
               "path": "overview/toggle",
               "base": "overview",
-              "list": [{
-                "name": "index",
-                "url": "overview/toggle/index.html",
-                "path": "overview/toggle/index",
-                "base": "overview/toggle",
-                "list": []
-              }]
+              "list": []
             }]
           }]
+
         },
+
         "agency-pkg": {
           "headline": {
             "text": "agency-pkg"

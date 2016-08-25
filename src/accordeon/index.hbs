@@ -15,38 +15,22 @@ list:
       'Entry 4.3.2': '#entry-4-3-2'
       'Entry 4.3.3': '#entry-4-3-3'
 ---
-{{!-- <ul class="pkg controller" data-pkg="agency-pkg-docs/accordeon" data-controller="agency-pkg-docs/accordeon">
-  {{#each this.list}}
-    <li>
-      {{#if this.list.length}}
-        <input type="checkbox" id="{{{../parent-id}}} - {{this.path}}"/>
-        {{{mixin "agency-pkg-docs/accordeon" this parent-id=path}}}
-      {{else}}
-      {{{mixin "agency-pkg-docs/accordeon/menu" url=url title=name}}}
-      {{{mixin "agency-pkg-docs/accordeon/external" url=url}}}
-      {{/if}}
-    </li>
-  {{/each}}
-</ul> --}}
-
-
 <div class="pkg controller" data-pkg="agency-pkg-docs/accordeon" data-controller="agency-pkg-docs/accordeon">
 
   <div>
-  {{#if list.length}}
-    <div class="label">
+    {{#if list.length}}
       {{#if url}}
-        <a href="{{{url}}}" title="{{{name}}}">{{{name}}}</a>
+        <a class="name internal" href="{{{url}}}" title="{{{name}}}">{{{name}}}</a>
       {{else}}
-        <span>{{{name}}}</span>
+        <span class="name">{{{name}}}</span>
       {{/if}}
       <span class="toggle js-click-accordeon-toggle"></span>
-    </div>
-  {{else}}
-    <a class="internal" href="{{{url}}}" title="{{{name}}}">{{{name}}}</a>
-    <a class="external" href="{{{url}}}" target="_blank">ext.</a>
-  {{/if}}
-
+    {{else}}
+      <a class="name internal" href="{{{url}}}" title="{{{name}}}">{{{name}}}</a>
+    {{/if}}
+    {{#if url}}
+      <a class="external" href="{{{url}}}" target="_blank">ext.</a>
+    {{/if}}
   </div>
 
   {{#if list.length}}
